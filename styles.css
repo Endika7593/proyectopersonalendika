@@ -1,10 +1,13 @@
-/* Estilos generales */
-body {
+body {cusor: ;
     font-family: Arial, sans-serif;
+    text-align: left;
+    margin:auto;
+    padding:0%;
+
   }
   
   header {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 10px;
   }
@@ -18,11 +21,13 @@ body {
   nav ul li {
     display: inline;
     margin-right: 10px;
+    
   }
   
   nav ul li a {
     color: #fff;
     text-decoration: none;
+    justify-content: center;
   }
   
   section {
@@ -30,6 +35,87 @@ body {
   }
   
   /* Estilo index */
+
+  .article-container {
+    display: flex; /* flesbos para los artiquelsss */
+    flex-wrap: wrap; /* para envolver los article en vrias filas */
+    justify-content: center; /* Centrar articles e horizontal */
+  }
+  
+  
+  #ilunlink,
+  #kaialink {
+    width: 250px;
+    transition: all .3s ease;
+    margin: 10px; /* espacio entre las fotos de los articulos */
+  }
+
+
+  
+  #ilunlink, #kaialink {
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+  }
+
+  #ilunlink img:first-child, #kaialink img:first-child{
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    opacity: 1;
+    
+  }
+
+  #ilunlink img:last-child, 
+  #kaialink img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0 ;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+
+  }
+    
+
+  #ilunlink:hover, #kaialink:hover {
+    transform:
+      perspective(250px)
+      rotateX(10deg)
+      translateY(-5%)
+      translateZ(0);
+  }
+
+  #ilunlink::before, #kaialink::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+      );
+    opacity: 0;
+    transition: all .3s ease;
+  }
+  
+  #ilunlink:hover::before, #kaialink:hover::before {
+    opacity: 1;
+  }
+
+  #ilunlink:hover img:last-child, #kaialink:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+
   /* Estilo Biografía */
   /* Estilo Portfolio */
   
@@ -48,14 +134,55 @@ body {
   }
 
   section img:hover {
-    cursor: crosshair;
+    cursor: pointer;
     width: 300px;
     opacity: 1;
     filter: contrast(120%)
   }
+
+   /* dispositivos móviles */
+   @media screen and (min-width:767px) {
+    .cabecera {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      width: 0 auto;
+      height: 0 auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+    }
+   }
+
+
+  /* dispositivos medianos */
+  @media screen and (min-width:992px) {
+
+  }
+
+  /* dispositivos de sobremesa */
+  @media screen and (min-width:1200px) {
+    #ilunlink,
+    #kaialink {
+      width: 500px; /* Aumentar el ancho de los articles */
+    }
+  
+    #ilunlink img:first-child,
+    #kaialink img:first-child {
+      width: 100%; /* Mantener ancho imgn 100% */
+      height: auto; /* Ajustar altura imgs auto */
+    }
+  }
+
+    op
+  
+   
   
 
   /* Estilo Contacto */
+
+
   /* Estilos específicos para cada sección */
   /* Añade aquí tus estilos personalizados para cada sección */
   
