@@ -117,6 +117,11 @@ body {cusor: ;
   }
 
   /* Estilo Biografía */
+
+
+
+
+
   /* Estilo Portfolio */
   
 .fotosilun {
@@ -139,6 +144,63 @@ body {cusor: ;
     opacity: 1;
     filter: contrast(120%)
   }
+
+  /* Estilo formulario */
+  .formcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    }
+    
+    
+    .formcontainer:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      animation: borderAnimation 5s infinite;
+    }
+    
+    @keyframes borderAnimation {
+      0% {
+        border-color: red;
+      }
+      25% {
+        border-color: blue;
+      }
+      50% {
+        border-color: green;
+      }
+      75% {
+        border-color: yellow;
+      }
+      100% {
+        border-color: red;
+      }
+    }
+
+  
+  /* Estilos para dispositivos móviles */
+  @media screen and (min-width: 320px) {
+    /* No es necesario agregar estilos específicos para dispositivos móviles si se mantiene la configuración básica de centrado */
+  }
+  
+  /* Estilos para pantallas más grandes */
+  @media screen and (min-width: 768px) {
+    .container {
+      justify-content: flex-start; /* Centra verticalmente en dispositivos más grandes */
+    }
+  }
+  
 
    /* dispositivos móviles */
    @media screen and (min-width:767px) {
@@ -163,6 +225,14 @@ body {cusor: ;
 
   /* dispositivos de sobremesa */
   @media screen and (min-width:1200px) {
+
+    .formcontainer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      }
+      
     #ilunlink,
     #kaialink {
       width: 500px; /* Aumentar el ancho de los articles */
@@ -174,8 +244,6 @@ body {cusor: ;
       height: auto; /* Ajustar altura imgs auto */
     }
   }
-
-    op
   
    
   
