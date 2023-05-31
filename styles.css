@@ -82,7 +82,7 @@ body {
   #ilunlink img:last-child, 
   #kaialink img:last-child {
     position: absolute;
-    width: 200px;
+    width: 500px;
     bottom: 0;
     left: 0 ;
     right: 0;
