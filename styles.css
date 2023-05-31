@@ -1,15 +1,20 @@
 *{
   font-family: 'Maven Pro', sans-serif; 
+  background-image: url('source\fotosilun\texturafondo.jpg');
+  box-sizing: border-box;
+  margin: 5;
+  padding: 5;
    }
 
+   img, video {
+    width: 100%;
+   }
 
 body {
     font-family: Arial, sans-serif;
     text-align: left;
     margin:auto;
     padding:0%;
-    background-image: url('source\fotosilun\texturafondo.jpg');
-
 
   }
   
@@ -305,13 +310,48 @@ body {
       justify-content: center;
       align-items: center;      
     }
-   }
+    
+ 
+   #ilunlink img:last-child, 
+  #kaialink img:last-child {
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    left: 0 ;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+     }
+  
+    }
 
 
   /* dispositivos medianos */
   @media screen and (min-width:992px) {
+      
+    #ilunlink img:first-child,
+    #kaialink img:first-child {
+      width: 100%; /* Mantener ancho imgn 100% */
+      height: auto; /* Ajustar altura imgs auto */
+    }
+  
 
-  }
+  #ilunlink img:last-child, 
+  #kaialink img:last-child {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    left: 0 ;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+     }
+    }
+
 
   /* dispositivos de sobremesa */
   @media screen and (min-width:1200px) {
@@ -333,7 +373,21 @@ body {
       width: 100%; /* Mantener ancho imgn 100% */
       height: auto; /* Ajustar altura imgs auto */
     }
-  }
+  
+  #ilunlink img:last-child, 
+  #kaialink img:last-child {
+    position: absolute;
+    width: 500px;
+    bottom: 0;
+    left: 0 ;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+     }
+    }
+
   
 
    
